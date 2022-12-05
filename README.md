@@ -38,6 +38,11 @@
 ![Vivek's github stats](https://github-readme-stats.vercel.app/api?username=Vivek-Murali&show_icons=true&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151515&hide=issues&count_private=true&include_all_commits=true)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Vivek-Murali&layout=compact&text_color=daf7dc&bg_color=151515&hide=css,html,php)](https://github.com/anuraghazra/github-readme-stats)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Vivek-Murali&theme=dark)](https://git.io/streak-stats)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Vivek-Murali&theme=github_dark)
+
+![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vivek-Murali&theme=github_dark)
+
+![](https://cr-skills-chart-widget.azurewebsites.net/api/api?username=theabbie)
 
 <!--START_SECTION:waka-->
 

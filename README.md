@@ -9,14 +9,14 @@
 <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="100%" height="20%"/>
 
 ### <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Developer.gif" width="45" /> About Me:
-- 🏦 I'm a Backend Engineering Lead working for a Health Tech startup in India 
+- 🏦 I'm a Data Practitioner working for a service based company providing insights on massive data.  
       <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
-- 📝 I regulary write technical articles for [hashnode](https://vivekmurali.info/) and [dev.to](https://dev.to/vivekmurali)
+- 📝 I regulary write technical articles for [Vivek'blogs](https://vivekmurali.info/) and [dev.to](https://dev.to/vivekmurali)
 - 💻 I use daily **.js**, **.java**, **.py**,  **.sql**
-- 📖 I am currently reading **Designing Data Intensive Application** by Martin Kleppmann
+- 📖 I am currently reading **Mastering Kstream and Ksql** by Mitch Seymour
 - 💬 Talk to me about cricket, python (both of these are not any kind of insect or animals), silicon valley & startups
-- 👯 We can connect to play some games of Chess ♟
-- ⚡ Fun fact: Je connais un peu le français
+- 👯 We can connect to play some games of Chess ♟ and maybe talking about blockchain.
+- ⚡ Fun fact: Cleared N5 Exam.
 - 🧑‍💻 Tech I work on :
 
 <p align="center">

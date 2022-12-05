@@ -8,7 +8,7 @@
 
 ![](https://camo.githubusercontent.com/992babdffd8c74a1502de375fbdf7e4d54773242/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f53576f536b4e36447854737a71494b4571762f67697068792e676966)
 
-<img src="https://tenor.com/bJKyU.gif" width="20%"/>
+<iframe src="https://giphy.com/embed/mi6DsSSNKDbUY" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/space-rocket-mi6DsSSNKDbUY">via GIPHY</a></p>
 
 ### <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Developer.gif" width="45" /> About Me:
 - 🏦 I'm a Backend Engineering Lead working for a Health Tech startup in India 

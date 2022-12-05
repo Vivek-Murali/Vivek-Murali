@@ -1,14 +1,12 @@
-# Hi there! <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="20%" />
+# Hi there! <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="50" />
 <p align="center">
-<a href="https://twitter.com/apoorv__tyagi" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="apoorv__tyagi" height="30" width="30" /></a>&nbsp;
-<a href="https://linkedin.com/in/apoorvtyagi" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="apoorvtyagi" height="30" width="30" /></a>&nbsp;
-<a href="http://discord.com/users/apoorv#4040" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/discord.svg" alt="apoorv#4040" height="40" width="30" /></a>&nbsp;
-<a href="https://www.buymeacoffee.com/apoorvtyagi"><img align="center" alt="Buy me a Coffee" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/buymeacoffee.svg" /></a>
+<a href="https://twitter.com/Jet_Vivek" target="blank"><img align="center" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="" /></a>&nbsp;
+<a href="https://www.linkedin.com/in/vivek-murali-482112a4/" target="blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt=""/></a>&nbsp;
+<a href="https://www.vivekmurali.info/" target="blank"><img align="center" src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt=""/></a>&nbsp;
+<a href="https://www.buymeacoffee.com/vivekmurali"><img align="center" alt="Buy me a Coffee" src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" /></a>
 </p>
 
-![](https://camo.githubusercontent.com/992babdffd8c74a1502de375fbdf7e4d54773242/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f53576f536b4e36447854737a71494b4571762f67697068792e676966)
-
-<iframe src="https://giphy.com/embed/mi6DsSSNKDbUY" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/space-rocket-mi6DsSSNKDbUY">via GIPHY</a></p>
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="100%" height="20%"/>
 
 ### <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Developer.gif" width="45" /> About Me:
 - 🏦 I'm a Backend Engineering Lead working for a Health Tech startup in India 
@@ -36,19 +34,15 @@
 </p>
 
 ---
-### <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='25' /> My Github Stats:
+### <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='25' /> &nbsp;Github Stats:
 ![Vivek's github stats](https://github-readme-stats.vercel.app/api?username=Vivek-Murali&show_icons=true&title_color=ffc857&icon_color=8ac926&text_color=daf7dc&bg_color=151515&hide=issues&count_private=true&include_all_commits=true)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Vivek-Murali&layout=compact&text_color=daf7dc&bg_color=151515&hide=css,html,php)](https://github.com/anuraghazra/github-readme-stats)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Vivek-Murali&theme=dark)](https://git.io/streak-stats)
-![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vivek-Murali&theme=github_dark)
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Vivek-Murali&theme=github_dark)
-
-
-<!--START_SECTION:waka-->
-
-<!--END_SECTION:waka-->
-
-⏳ **Year Progress** { ███████████████████████████▁▁▁ } 92.61 % as on ⏰ 4-Dec-2022
+![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vivek-Murali&theme=gruvbox&utcOffset=8)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Vivek-Murali&theme=gruvbox)
+![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Vivek-Murali&theme=gruvbox)
+![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Vivek-Murali&theme=gruvbox)
+![](https://github-profile-trophy.vercel.app/?username=Vivek-Murali)
 
 ---
 
@@ -68,7 +62,7 @@
 ### <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/hmm.gif" width="20" /> A Famous Fact/Quote:
 <a href="https://github.com/marketplace/actions/quote-readme">
 <!--STARTS_HERE_QUOTE_README-->
-• <i>“I do not fear computers. I fear lack of them.”— Isaac Asimov  </i>
+• <i>“Knowledge is power”— Francis Bacon</i>
 <!--ENDS_HERE_QUOTE_README-->
 </a>
 
@@ -76,6 +70,8 @@
 
 ### <img align ='center' src='https://media2.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif?cid=ecf05e47p3cd513axbek3f56ti3jzizq8hincw20jauyyfyw&rid=giphy.gif' width ='29' /> Here's some humor for you:
 <img src="https://readme-jokes.vercel.app/api" alt="Error fetching resource, Refresh again to view Jokes Card" width = '11000' />
+
+
 
 <!---
 Vivek-Murali/Vivek-Murali is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.

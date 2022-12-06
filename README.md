@@ -12,7 +12,7 @@
 - 🏦 I'm a Data Practitioner working for a service based company providing insights on massive data.  
       <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
 - 📝 I regulary write technical articles for [Vivek'blogs](https://vivekmurali.info/) and [dev.to](https://dev.to/vivekmurali)
-- 💻 I use daily **.js**, **.java**, **.py**,  **.sql**
+- 💻 I use daily **.js**, **.java**, **.py**,  **.sql**, **.ipynb**, **.yaml**
 - 📖 I am currently reading **Mastering Kstream and Ksql** by Mitch Seymour
 - 💬 Talk to me about cricket, python (both of these are not any kind of insect or animals), silicon valley & startups
 - 👯 We can connect to play some games of Chess ♟ or maybe have discussion about blockchain.

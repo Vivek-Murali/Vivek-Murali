@@ -15,7 +15,7 @@
 - 💻 I use daily **.js**, **.java**, **.py**,  **.sql**
 - 📖 I am currently reading **Mastering Kstream and Ksql** by Mitch Seymour
 - 💬 Talk to me about cricket, python (both of these are not any kind of insect or animals), silicon valley & startups
-- 👯 We can connect to play some games of Chess ♟ and maybe talking about blockchain.
+- 👯 We can connect to play some games of Chess ♟ or maybe have discussion about blockchain.
 - ⚡ Fun fact: Cleared N5 Exam.
 - 🧑‍💻 Tech I work on :
 

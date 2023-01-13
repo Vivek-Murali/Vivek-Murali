@@ -39,28 +39,30 @@
 </p>
 
 ---
-### <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='25' /> &nbsp;Github Stats:
+### <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='25' /> &nbsp;Github Stats: Visitors Count -> ![Visitor Count](https://profile-counter.glitch.me/{Vivek-Murali}/count.svg)
+[![Vivek's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Vivek-Murali&theme=tokyo-night)](https://github.com/Vivek-Murali/github-readme-activity-graph)
+![Vivek's GitHub stats](https://github-readme-stats-alpha-lyart.vercel.app/api?username=Vivek-Murali&show_icons=true&theme=tokyonight)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Vivek-Murali&theme=dark)](https://git.io/streak-stats)
-![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vivek-Murali&theme=gruvbox&utcOffset=8)
+![](https://github-profile-trophy.vercel.app/?username=Vivek-Murali)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Vivek-Murali&theme=gruvbox)
+![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vivek-Murali&theme=gruvbox&utcOffset=8)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Vivek-Murali&theme=gruvbox)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Vivek-Murali&theme=gruvbox)
-![](https://github-profile-trophy.vercel.app/?username=Vivek-Murali)
-
-[![Vivek's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Vivek-Murali&theme=tokyo-night)](https://github.com/Vivek-Murali/github-readme-activity-graph)
-
-
-
-![Vivek's GitHub stats](https://github-readme-stats-vivek-murali.vercel.app/api?username=Vivek-Murali&show_icons=true&theme=radical)
-
-
 ---
 
-### <img src = "https://media1.giphy.com/media/JZ40cnfnN11KycrvMF/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = '23' /> My Latest Blog posts:
-<!-- BLOG-POST-LIST:START -->
-- [Airbnb Analysis](https://007jetfire.medium.com/comprehensive-airbnb-listing-analysis-of-boston-and-seattle-32da1a69a39)
-<!-- BLOG-POST-LIST:END -->
+### <img src = "https://media1.giphy.com/media/JZ40cnfnN11KycrvMF/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = '23' /> Highlight Projects
 
+<a href="https://github.com/Zhenye-Na/DA-RNN">
+  <img align="center" src="https://github-readme-stats-alpha-lyart.vercel.app/api/pin/?username=Vivek-Murali&repo=Scrappers&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Scrappers" />
+</a>
+
+<a href="https://github.com/Zhenye-Na/crnn-pytorch">
+  <img align="center" src="https://github-readme-stats-alpha-lyart.vercel.app/api/pin/?username=Vivek-Murali&repo=Airbnb&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Airbnb" />
+</a>
+
+<!-- ## 👨‍💻 This week, I spent my time on:
+
+[![zhenye's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=nazhenye&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e)](https://github.com/anuraghazra/github-readme-stats) -->
 ▶ [... view more](https://www.vivekmurali.info/all_pages)
 
 ---

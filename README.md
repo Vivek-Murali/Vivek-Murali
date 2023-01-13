@@ -47,8 +47,7 @@
 ![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Vivek-Murali&theme=gruvbox)
 ![](https://github-profile-trophy.vercel.app/?username=Vivek-Murali)
 
-[![Vivek's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=Vivek-Murali)](https://github.com/anuraghazra/github-readme-stats)
-
+[![Vivek's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Vivek-Murali&theme=tokyo-night)](https://github.com/Vivek-Murali/github-readme-activity-graph)
 ---
 
 ### <img src = "https://media1.giphy.com/media/JZ40cnfnN11KycrvMF/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = '23' /> My Latest Blog posts:

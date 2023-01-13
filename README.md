@@ -46,7 +46,7 @@
 </p>
 
 ---
-### <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='25' /> &nbsp;Github Stats: Visitors Count -> ![Visitor Count](https://profile-counter.glitch.me/{Vivek-Murali}/count.svg)
+### <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='25' /> &nbsp;Github Stats: Visitors Count 
 [![Vivek's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Vivek-Murali&theme=tokyo-night)](https://github.com/Vivek-Murali/github-readme-activity-graph)
 ![Vivek's GitHub stats](https://github-readme-stats-alpha-lyart.vercel.app/api?username=Vivek-Murali&show_icons=true&theme=tokyonight)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Vivek-Murali&theme=dark)](https://git.io/streak-stats)

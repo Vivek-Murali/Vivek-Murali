@@ -48,6 +48,12 @@
 ![](https://github-profile-trophy.vercel.app/?username=Vivek-Murali)
 
 [![Vivek's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Vivek-Murali&theme=tokyo-night)](https://github.com/Vivek-Murali/github-readme-activity-graph)
+
+
+
+![Vivek's GitHub stats](https://github-readme-stats-vivek-murali.vercel.app/api?username=Vivek-Murali&show_icons=true&theme=radical)
+
+
 ---
 
 ### <img src = "https://media1.giphy.com/media/JZ40cnfnN11KycrvMF/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = '23' /> My Latest Blog posts:

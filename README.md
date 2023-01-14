@@ -13,7 +13,8 @@
 <a href="https://www.buymeacoffee.com/vivekmurali"><img align="center" alt="Buy me a Coffee" src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" /></a>
 </p>
 
-<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="100%" height="20%"/>
+
+<img src="https://media.giphy.com/media/sRFEa8lbeC7zbcIZZR/giphy.gif" width="100%" height="20%"/>
 
 ### <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Developer.gif" width="45" /> About Me:
 - 🏦 I'm a Data Practitioner working for a service based company providing insights on massive data.  

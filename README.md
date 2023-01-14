@@ -49,27 +49,43 @@
 ### <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='25' /> &nbsp;Github Stats: Visitors Count 
 [![Vivek's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Vivek-Murali&theme=tokyo-night)](https://github.com/Vivek-Murali/github-readme-activity-graph)
 ![Vivek's GitHub stats](https://github-readme-stats-alpha-lyart.vercel.app/api?username=Vivek-Murali&show_icons=true&theme=tokyonight)
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Vivek-Murali&theme=dark)](https://git.io/streak-stats)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Vivek-Murali&theme=tokyonight)](https://git.io/streak-stats)
 ![](https://github-profile-trophy.vercel.app/?username=Vivek-Murali)
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Vivek-Murali&theme=gruvbox)
-![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vivek-Murali&theme=gruvbox&utcOffset=8)
-![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Vivek-Murali&theme=gruvbox)
-![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Vivek-Murali&theme=gruvbox)
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Vivek-Murali&theme=tokyonight)
+![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vivek-Murali&theme=tokyonight&utcOffset=8)
+![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Vivek-Murali&theme=tokyonight)
+![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Vivek-Murali&theme=tokyonight)
+![](https://github-readme-stats-alpha-lyart.vercel.app/api/top-langs/?username=Vivek-Murali&layout=compact&theme=tokyonight&hide_border=true)
 ---
 
 ### <img src = "https://media1.giphy.com/media/JZ40cnfnN11KycrvMF/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = '23' /> Highlight Projects
 
-<a href="https://github.com/Zhenye-Na/DA-RNN">
-  <img align="center" src="https://github-readme-stats-alpha-lyart.vercel.app/api/pin/?username=Vivek-Murali&repo=Scrappers&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Scrappers" />
+<div dir="auto" <img style="max-width: 100%;"/>
+ <a href="https://github.com/Vivek-Murali/Scrappers">
+ 
+  <img src="https://github-readme-stats-alpha-lyart.vercel.app/api/pin/?username=Vivek-Murali&repo=Scrappers&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Scrappers"/>
 </a>
-
-<a href="https://github.com/Zhenye-Na/crnn-pytorch">
-  <img align="center" src="https://github-readme-stats-alpha-lyart.vercel.app/api/pin/?username=Vivek-Murali&repo=Airbnb&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Airbnb" />
+<a href="https://github.com/Vivek-Murali/Buyer-s-playground">
+  <img src="https://github-readme-stats-alpha-lyart.vercel.app/api/pin/?username=Vivek-Murali&repo=Buyer-s-playground&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Buyer-s-playground" />
 </a>
+&nbsp;
 
-<!-- ## 👨‍💻 This week, I spent my time on:
+<a href="https://github.com/Vivek-Murali/Data-Engineering-Projects">
+  <img src="https://github-readme-stats-alpha-lyart.vercel.app/api/pin/?username=Vivek-Murali&repo=Data-Engineering-Projects&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Data-Engineering-Projects" />
+</a>
+<a href="https://github.com/Vivek-Murali/Disaster_Response_Project">
+  <img src="https://github-readme-stats-alpha-lyart.vercel.app/api/pin/?username=Vivek-Murali&repo=Disaster_Response_Project&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Disaster_Response_Project" />
+</a>
+<a href="https://github.com/Vivek-Murali/Airbnb">
+  <img src="https://github-readme-stats-alpha-lyart.vercel.app/api/pin/?username=Vivek-Murali&repo=Airbnb&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Airbnb" />
+</a>
+<a href="https://github.com/Vivek-Murali/KafkaAirflow-">
+  <img src="https://github-readme-stats-alpha-lyart.vercel.app/api/pin/?username=Vivek-Murali&repo=KafkaAirflow-&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="KafkaAirflow-" />
+</a>
+</div>
 
-[![zhenye's wakatime stats](https://github-readme-stats.vercel.app/api/wakatime?username=nazhenye&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e)](https://github.com/anuraghazra/github-readme-stats) -->
+
+
 ▶ [... view more](https://www.vivekmurali.info/all_pages)
 
 ---

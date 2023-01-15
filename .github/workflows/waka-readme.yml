@@ -19,9 +19,3 @@ jobs:
           TIME_RANGE: all_time
           SHOW_TIME: true
           SHOW_MASKED_TIME: true
-          SHOW_OS: true
-          SHOW_PROJECTS: true
-          SHOW_COMMITS: true
-          SHOW_DAYS_OF_WEEK: "FALSE"
-          SHOW_TIMEZONE: true
-          SHOW_SHORT_INFO: true

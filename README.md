@@ -61,14 +61,14 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 14 January 2023 - To: 19 January 2023
+From: 14 January 2023 - To: 20 January 2023
 
-Total Time: 5 hrs 45 mins
+Total Time: 6 hrs 41 mins
 
-Python       2 hrs 15 mins   >>>>>>>>>>---------------   39.15 %
-JavaScript   1 hr 22 mins    >>>>>>-------------------   23.82 %
-YAML         41 mins         >>>----------------------   12.00 %
-Other        36 mins         >>>----------------------   10.54 %
+Python       3 hrs 6 mins    >>>>>>>>>>>>-------------   46.36 %
+JavaScript   1 hr 22 mins    >>>>>--------------------   20.52 %
+YAML         41 mins         >>>----------------------   10.34 %
+Other        36 mins         >>-----------------------   09.10 %
 ```
 
 <!--END_SECTION:waka-->

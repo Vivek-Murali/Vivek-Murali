@@ -48,7 +48,6 @@
 
 ---
 ### <img src='https://media1.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif?cid=ecf05e47x2g034i9pzwtzzsd3xgg2w9nr94t4tflbbgo3008&rid=giphy.gif' width='25' /> &nbsp;Github Stats:
-[![Vivek's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=Vivek-Murali&theme=tokyo-night)](https://github.com/Vivek-Murali/github-readme-activity-graph)
 ![Vivek's GitHub stats](https://github-readme-stats-qr04zuahf-vivek-murali.vercel.app/api?username=Vivek-Murali&show_icons=true&theme=tokyonight)
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Vivek-Murali&theme=tokyonight)](https://git.io/streak-stats)
 ![](https://github-profile-trophy.vercel.app/?username=Vivek-Murali)

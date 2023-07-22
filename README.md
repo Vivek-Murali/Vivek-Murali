@@ -60,16 +60,16 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 14 January 2023 - To: 19 July 2023
+From: 14 January 2023 - To: 20 July 2023
 
-Total Time: 110 hrs 35 mins
+Total Time: 112 hrs 50 mins
 
-Python       72 hrs 8 mins   >>>>>>>>>>>>>>>>---------   65.23 %
-HTML         9 hrs 59 mins   >>-----------------------   09.03 %
-JavaScript   6 hrs 15 mins   >------------------------   05.66 %
-Bash         4 hrs 25 mins   >------------------------   04.00 %
-JSON         3 hrs 27 mins   >------------------------   03.13 %
-Text         3 hrs 5 mins    >------------------------   02.79 %
+Python       73 hrs 7 mins   >>>>>>>>>>>>>>>>---------   64.80 %
+HTML         11 hrs 8 mins   >>-----------------------   09.87 %
+JavaScript   6 hrs 15 mins   >------------------------   05.55 %
+Bash         4 hrs 27 mins   >------------------------   03.95 %
+JSON         3 hrs 27 mins   >------------------------   03.06 %
+Text         3 hrs 5 mins    >------------------------   02.74 %
 ```
 
 <!--END_SECTION:waka-->

@@ -57,12 +57,12 @@
 <!--START_SECTION:waka-->
 
 ```rust
-From: 14 January 2023 - To: 10 December 2023
+From: 14 January 2023 - To: 11 December 2023
 
-Total Time: 302 hrs 48 mins
+Total Time: 302 hrs 59 mins
 
-Python           221 hrs 16 mins >>>>>>>>>>>>>>>>>>-------   72.54 %
-HTML             29 hrs 8 mins   >>-----------------------   09.56 %
+Python           221 hrs 27 mins >>>>>>>>>>>>>>>>>>-------   72.56 %
+HTML             29 hrs 8 mins   >>-----------------------   09.55 %
 JavaScript       9 hrs 33 mins   >------------------------   03.13 %
 Text             7 hrs 36 mins   >------------------------   02.49 %
 Bash             7 hrs 25 mins   >------------------------   02.43 %

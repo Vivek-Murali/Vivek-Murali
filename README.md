@@ -53,6 +53,7 @@
 ![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Vivek-Murali&theme=tokyonight)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Vivek-Murali&theme=tokyonight)
 ![](https://github-readme-stats-qr04zuahf-vivek-murali.vercel.app/api/top-langs/?username=Vivek-Murali&layout=compact&theme=tokyonight&hide_border=true)
+![Codewars](https://github.r2v.ch/codewars?user=Vivek-Murali&name=true&top_languages=true&stroke=%23b362ff&theme=purple_dark)
 ---
 <!--START_SECTION:waka-->
 

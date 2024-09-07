@@ -75,36 +75,6 @@ Rust             5 hrs 11 mins   -------------------------   01.12 %
 
 <!--END_SECTION:waka-->
 
-### <img src = "https://media1.giphy.com/media/JZ40cnfnN11KycrvMF/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = '23' /> Highlight Projects
-
-<div dir="auto" <img style="max-width: 100%;"/>
- <a href="https://github.com/Vivek-Murali/Scrappers">
- 
-  <img src="https://github-readme-stats-qr04zuahf-vivek-murali.vercel.app/api/pin/?username=Vivek-Murali&repo=Scrappers&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Scrappers"/>
-</a>
-<a href="https://github.com/Vivek-Murali/Buyer-s-playground">
-  <img src="https://github-readme-stats-qr04zuahf-vivek-murali.vercel.app/api/pin/?username=Vivek-Murali&repo=Buyer-s-playground&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Buyer-s-playground" />
-</a>
-&nbsp;
-
-<a href="https://github.com/Vivek-Murali/Data-Engineering-Projects">
-  <img src="https://github-readme-stats-qr04zuahf-vivek-murali.vercel.app/api/pin/?username=Vivek-Murali&repo=Data-Engineering-Projects&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Data-Engineering-Projects" />
-</a>
-<a href="https://github.com/Vivek-Murali/Disaster_Response_Project">
-  <img src="https://github-readme-stats-qr04zuahf-vivek-murali.vercel.app/api/pin/?username=Vivek-Murali&repo=Disaster_Response_Project&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Disaster_Response_Project" />
-</a>
-<a href="https://github.com/Vivek-Murali/Airbnb">
-  <img src="https://github-readme-stats-qr04zuahf-vivek-murali.vercel.app/api/pin/?username=Vivek-Murali&repo=Airbnb&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="Airbnb" />
-</a>
-<a href="https://github.com/Vivek-Murali/KafkaAirflow-">
-  <img src="https://github-readme-stats-qr04zuahf-vivek-murali.vercel.app/api/pin/?username=Vivek-Murali&repo=KafkaAirflow-&show_icons=true&line_height=27&title_color=6aa6f8&text_color=8a919a&icon_color=6aa6f8&bg_color=22272e" alt="KafkaAirflow-" />
-</a>
-</div>
-
-
-
-▶ [... view more](https://www.vivekmurali.info/all_pages)
-
 ---
 
 ### <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/hmm.gif" width="20" /> A Famous Fact/Quote:

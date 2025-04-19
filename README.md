@@ -57,20 +57,20 @@
 <!--START_SECTION:waka-->
 
 ```rust
-From: 14 January 2023 - To: 16 April 2025
+From: 14 January 2023 - To: 17 April 2025
 
-Total Time: 610 hrs 58 mins
+Total Time: 614 hrs 26 mins
 
-Python           416 hrs 19 mins >>>>>>>>>>>>>>>>>--------   67.80 %
-HTML             68 hrs 12 mins  >>>----------------------   11.11 %
-TypeScript       26 hrs 22 mins  >------------------------   04.30 %
-JSON             19 hrs 26 mins  >------------------------   03.17 %
-JavaScript       18 hrs 21 mins  >------------------------   02.99 %
-Text             9 hrs 49 mins   -------------------------   01.60 %
-Markdown         8 hrs 40 mins   -------------------------   01.41 %
-Bash             8 hrs 26 mins   -------------------------   01.38 %
-YAML             8 hrs 1 min     -------------------------   01.31 %
-Docker           7 hrs 46 mins   -------------------------   01.27 %
+Python           418 hrs 42 mins >>>>>>>>>>>>>>>>>--------   67.80 %
+HTML             68 hrs 12 mins  >>>----------------------   11.05 %
+TypeScript       27 hrs 8 mins   >------------------------   04.39 %
+JSON             19 hrs 26 mins  >------------------------   03.15 %
+JavaScript       18 hrs 21 mins  >------------------------   02.97 %
+Text             10 hrs 4 mins   -------------------------   01.63 %
+Markdown         8 hrs 40 mins   -------------------------   01.40 %
+Bash             8 hrs 30 mins   -------------------------   01.38 %
+YAML             8 hrs 1 min     -------------------------   01.30 %
+Docker           7 hrs 46 mins   -------------------------   01.26 %
 ```
 
 <!--END_SECTION:waka-->

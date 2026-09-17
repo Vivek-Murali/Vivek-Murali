@@ -1,8 +1,6 @@
 <img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=Vivek-Murali.Vivek-Murali">
 <h1 align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com/?lines=Hello,+There!+👋;Vivek+Murali+here....;Nice+to+meet+you!&center=true&size=30">
-  </a>
+  <img src="assets/launch.gif" alt="vivek@github:~$ ./launch.sh — an ASCII rocket lifting off the pad" width="620">
 </h1>
 
 

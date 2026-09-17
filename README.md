@@ -1,57 +1,40 @@
-<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=Vivek-Murali.Vivek-Murali">
-<h1 align="center">
-  <img src="assets/launch.gif" alt="vivek@github:~$ ./launch.sh — an ASCII rocket lifting off the pad" width="620">
-</h1>
+<div align="center">
 
+<table>
+<tr>
+<td width="37%"><img src="assets/launch.gif" width="100%" alt="vivek@github:~$ ./launch.sh — an ASCII rocket lifting off the pad"></td>
+<td width="63%"><img src="assets/neofetch.svg" width="100%" alt="neofetch: Data Scientist · AI @ Leo CybSec, Peterborough UK. Stack: LangGraph, GraphRAG, Neo4j, Kafka, Apache Beam, Airflow, Snowflake, GCP, Azure, Python, SQL, TypeScript"></td>
+</tr>
+</table>
 
-<p align="center">
-<a href="https://twitter.com/Jet_Vivek" target="blank"><img align="center" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="" /></a>&nbsp;
-<a href="https://www.linkedin.com/in/vivek-murali-482112a4/" target="blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt=""/></a>&nbsp;
-<a href="https://www.vivekmurali-de.info/" target="blank"><img align="center" src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt=""/></a>&nbsp;
-<a href="https://www.buymeacoffee.com/vivekmurali"><img align="center" alt="Buy me a Coffee" src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" /></a>
-</p>
+<h2>Vivek Murali</h2>
+<p><b>AI · Data Science · Data Engineering</b> — <i>I make messy data behave.</i></p>
 
+<p><a href="https://www.vivekmurali.info/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-vivekmurali.info-252120?style=for-the-badge&logo=googlechrome&logoColor=CFBA7F&labelColor=252120&color=3E3731"></a> <a href="https://www.linkedin.com/in/vivek-murali-482112a4/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Vivek_Murali-252120?style=for-the-badge&logo=linkedin&logoColor=68B1C1&labelColor=252120&color=3E3731"></a> <a href="https://twitter.com/Jet_Vivek"><img alt="X" src="https://img.shields.io/badge/X-%40Jet__Vivek-252120?style=for-the-badge&logo=x&logoColor=F6F4F7&labelColor=252120&color=3E3731"></a> <a href="https://www.buymeacoffee.com/vivekmurali"><img alt="Buy me a coffee" src="https://img.shields.io/badge/Buy_me_a_coffee-%E2%98%95-252120?style=for-the-badge&logo=buymeacoffee&logoColor=CFBA7F&labelColor=252120&color=3E3731"></a></p>
+<p><img alt="Profile views" src="https://visitor-badge.laobi.icu/badge?page_id=Vivek-Murali.Vivek-Murali&style=flat-square&color=3E3731"> <img alt="Followers" src="https://img.shields.io/github/followers/Vivek-Murali?style=flat-square&labelColor=252120&color=3E3731"> <img alt="Stars" src="https://img.shields.io/github/stars/Vivek-Murali?style=flat-square&labelColor=252120&color=3E3731"></p>
 
-<img src="https://media.giphy.com/media/sRFEa8lbeC7zbcIZZR/giphy.gif" width="100%" height="20%"/>
-
-### <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Developer.gif" width="45" /> About Me:
-- 🏦 I'm a Data Practitioner working for a service based company providing insights on massive data.  
-      <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30">
-- 📝 I regulary write technical articles for [Vivek'blogs](https://vivekmurali.info/) and [dev.to](https://dev.to/vivekmurali)
-- 💻 I use daily **.js**, **.java**, **.py**,  **.sql**, **.ipynb**, **.yaml**
-- 📖 I am currently reading **Mastering Kstream and Ksql** by Mitch Seymour
-- 💬 Talk to me about cricket, python (both of these are not any kind of insect or animals), silicon valley & startups
-- 👯 We can connect to play some games of Chess ♟ or maybe have discussion about blockchain.
-- ⚡ Fun fact: Cleared N5 Exam.
-- 🧑‍💻 Tech I work on :
-
-<p align="center">
-      <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="java" width="65" height="65"/> 
-      <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="python" width="55" height="55"/>
-      <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Nodejs" width="55" height="55"/>
-      <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="GIT" width="55" height="55"/> 
-      <img src="https://www.vectorlogo.zone/logos/apache_beam/apache_beam-ar21.svg"/>
-      <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg"/>
-      <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-ar21.svg"/>
-      <img src="https://www.vectorlogo.zone/logos/databricks/databricks-ar21.svg"/>
-      <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="55" height="55"/>
-      <img src="https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" alt="eastic" width="55" height="55"/>
-      <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="55" height="55"/>
-      <img src="https://www.vectorlogo.zone/logos/docker/docker-official.svg" alt="docker" width="60" height="50"/>
-      <img src="https://www.vectorlogo.zone/logos/mysql/mysql-icon.svg" alt="mysql" width="45" height="55"/>
-      <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="mongodb" width="45" height="55"/>
-      <img src="https://www.vectorlogo.zone/logos/apache_cassandra/apache_cassandra-ar21.svg"/>
-      <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg"/>
-</p>
+</div>
 
 ---
-![](https://github-profile-trophy.vercel.app/?username=Vivek-Murali)
-![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Vivek-Murali&theme=tokyonight)
-![](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Vivek-Murali&theme=tokyonight&utcOffset=8)
-![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Vivek-Murali&theme=tokyonight)
-![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Vivek-Murali&theme=tokyonight)
-![](https://github-readme-stats-qr04zuahf-vivek-murali.vercel.app/api/top-langs/?username=Vivek-Murali&layout=compact&theme=tokyonight&hide_border=true)
----
+
+### ▶ Now building
+
+<img src="assets/now-building.svg" width="100%" alt="In progress: HawkSight — AI-powered cricket analytics with YOLO11 tracking; AniGraph — multimodal anime knowledge-graph RAG on Neo4j; EchoFinance — explainable financial sentiment from text and audio">
+
+### ▶ Featured projects
+
+<img src="assets/featured.svg" width="100%" alt="Featured repositories: healthcare-cohort-agent, Buyer-s-playground, Spark-Refresher-Projects, StreamingPipeline, Scrappers, CarCrashAnalysis">
+
+### ▶ GitHub stats & favourite languages
+
+<p align="center">
+<img src="assets/stats.svg" width="49%" alt="73 public repos, 67 stars earned, 7 forks, 18 followers, 426 contributions in the past year, 39 day streak, 901 hours coded, 9 years on GitHub, active on 95% of days (348 of 368)">
+<img src="assets/languages.svg" width="49%" alt="Time coded: Python 71.7%, HTML 7.5%, TypeScript 5.6%, JSON 3.4%, JavaScript 2.0%, Bash 1.3%, YAML 1.3%, Markdown 1.2%. Repos by language: Python 11, Jupyter 6, Shell 3, Rust 2, JavaScript 2, Makefile 1">
+</p>
+
+<details>
+<summary>▶ Full WakaTime breakdown</summary>
+
 <!--START_SECTION:waka-->
 
 ```rust
@@ -73,23 +56,14 @@ Docker                     9 hrs 44 mins   -------------------------   01.08 %
 
 <!--END_SECTION:waka-->
 
+</details>
+
 ---
 
-### <img alt="GIF" src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/hmm.gif" width="20" /> A Famous Fact/Quote:
-<a href="https://github.com/marketplace/actions/quote-readme">
+<div align="center">
+
 <!--STARTS_HERE_QUOTE_README-->
 • <i>“Knowledge is power”— Francis Bacon</i>
 <!--ENDS_HERE_QUOTE_README-->
-</a>
 
----
-
-### <img align ='center' src='https://media2.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif?cid=ecf05e47p3cd513axbek3f56ti3jzizq8hincw20jauyyfyw&rid=giphy.gif' width ='29' /> Here's some humor for you:
-<img src="https://readme-jokes.vercel.app/api" alt="Error fetching resource, Refresh again to view Jokes Card" width = '11000' />
-
-
-
-<!---
-Vivek-Murali/Vivek-Murali is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+</div>

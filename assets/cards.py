@@ -7,12 +7,18 @@ Everything the cards display lives in DATA below - edit it and re-run to refresh
 the profile. Data-mark colours come from SERIES, a categorical palette validated
 for the dark card surface (lightness band, chroma, CVD separation, contrast).
 """
+import base64
+import io
 import os
 from xml.sax.saxutils import escape as esc
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "assets")
-MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace"
+MONO = "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+FONT_DIR = "/mnt/skills/examples/canvas-design/canvas-fonts"
+FONT_SRC = {"400": FONT_DIR + "/JetBrainsMono-Regular.ttf",
+            "700": FONT_DIR + "/JetBrainsMono-Bold.ttf"}
+GLYPHS = set()          # every character the cards actually draw
 
 # ----------------------------------------------------------------- palette --
 C = {
@@ -102,6 +108,7 @@ REPO_HUE = {n: LANG_HUE.get(n, SERIES[i]) for i, (n, _) in enumerate(DATA["repo_
 
 # ---------------------------------------------------------------- helpers --
 def t(x, y, s, fill=None, size=13, weight=None, anchor=None, opacity=None):
+    GLYPHS.update(s)
     a = ['x="%s" y="%s"' % (x, y), 'fill="%s"' % (fill or C["fg"]), 'font-size="%s"' % size]
     if weight:
         a.append('font-weight="%s"' % weight)
@@ -142,14 +149,42 @@ def bar(x, y, w, h, pct, fill, track=None):
     return p
 
 
-def svg(w, h, body):
+def font_face():
+    """Subset JetBrains Mono to the glyphs in use and inline it as WOFF2.
+
+    The cards render through GitHub's image proxy, where an SVG cannot fetch
+    anything external - so the font travels inside the file or not at all.
+    Subsetting keeps that payload to a few KB per weight.
+    """
+    from fontTools import subset
+    from fontTools.ttLib import TTFont
+    text = "".join(sorted(GLYPHS)) + " "
+    out = []
+    for weight, path in FONT_SRC.items():
+        f = TTFont(path)
+        opt = subset.Options(layout_features=["*"], notdef_outline=True, desubroutinize=True)
+        sub = subset.Subsetter(options=opt)
+        sub.populate(text=text)
+        sub.subset(f)
+        f.flavor = "woff2"
+        buf = io.BytesIO()
+        f.save(buf)
+        b64 = base64.b64encode(buf.getvalue()).decode()
+        out.append("@font-face{font-family:'JetBrains Mono';font-style:normal;"
+                   "font-weight:%s;src:url(data:font/woff2;base64,%s) format('woff2')}" % (weight, b64))
+    return "<defs><style>%s</style></defs>" % "".join(out)
+
+
+def svg(w, h, body, face=""):
     return ('<svg xmlns="http://www.w3.org/2000/svg" width="%s" height="%s" viewBox="0 0 %s %s" '
-            'font-family="%s">%s</svg>' % (w, h, w, h, MONO, body))
+            'font-family="%s">%s%s</svg>' % (w, h, w, h, MONO, face, body))
+
+
+CARDS = []
 
 
 def write(name, w, h, body):
-    with open(os.path.join(OUT, name), "w") as f:
-        f.write(svg(w, h, body))
+    CARDS.append((name, w, h, body))
     return name
 
 
@@ -334,5 +369,10 @@ def card_langs():
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
     for fn in (card_neofetch, card_building, card_repos, card_stats, card_langs):
-        name = fn()
+        fn()
+    face = font_face()
+    print("%d glyphs subset, font payload %.1f KB/card" % (len(GLYPHS), len(face) / 1024.0))
+    for name, w, h, body in CARDS:
+        with open(os.path.join(OUT, name), "w") as f:
+            f.write(svg(w, h, body, face))
         print("%-20s %6d bytes" % (name, os.path.getsize(os.path.join(OUT, name))))

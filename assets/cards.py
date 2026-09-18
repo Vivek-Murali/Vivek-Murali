@@ -449,9 +449,103 @@ def card_langs():
     return write("languages.svg", W, H, "".join(p))
 
 
+# ------------------------------------------------------- 6. commits by hour --
+def card_activity():
+    """Single-series histogram: magnitude over a cyclical dimension.
+
+    One series, so no legend - the title names it - and only the peak is
+    directly labelled rather than every bar.
+    """
+    W, H = 440, 300
+    hrs = LIVE.get("hours") or {}
+    counts = hrs.get("by_hour") or []
+    p = [window(0.5, 0.5, W - 1, H - 1, "vivek@github: ~$ git log --date=local")]
+    p.append(t(22, 58, "\u2014 commits by hour", C["teal"], 12.5, "bold"))
+    p.append(t(22 + 18 * 7.5, 58, "(all time \u00b7 bots excluded)", C["faint"], 9.5))
+    base, top = 236, 86
+    if not counts or not any(counts):
+        p.append(t(22, 120, "populated by the daily workflow", C["faint"], 10.5))
+        return write("activity.svg", W, H, "".join(p))
+    peak = max(counts)
+    gap, left = 3.0, 24.0
+    bw = (W - 48 - gap * 23) / 24.0
+    p.append('<line x1="%s" y1="%s" x2="%s" y2="%s" stroke="%s"/>'
+             % (left, base + 1, W - 24, base + 1, C["line"]))     # recessive baseline
+    for h, n in enumerate(counts):
+        x = left + h * (bw + gap)
+        ht = (n / float(peak)) * (base - top)
+        if n:
+            p.append(rect(x, base - ht, bw, ht, C["teal"] if n == peak else C["track"],
+                          min(4, bw / 2)))
+            if n == peak:
+                p.append(t(x + bw / 2, base - ht - 7, str(n), C["bright"], 10, anchor="middle"))
+    for h in (0, 6, 12, 18, 23):
+        x = left + h * (bw + gap) + bw / 2
+        p.append(t(x, base + 16, "%02d" % h, C["faint"], 9.5, anchor="middle"))
+    if hrs.get("peak") is not None:
+        p.append(t(22, H - 22, "busiest at %02d:00 \u00b7 %d commits counted"
+                   % (hrs["peak"], hrs.get("total", 0)), C["dim"], 10.5))
+    return write("activity.svg", W, H, "".join(p))
+
+
+# ------------------------------------------------- 7. repo mix and traffic --
+def card_repos_mix():
+    """Two-part whole as a doughnut, with both parts directly labelled."""
+    import math
+    W, H = 440, 300
+    tot = LIVE.get("totals") or {}
+    pub, priv = tot.get("public_repos"), tot.get("private")
+    p = [window(0.5, 0.5, W - 1, H - 1, "vivek@github: ~$ gh repo list --visibility")]
+    p.append(t(22, 58, "\u2014 repositories", C["teal"], 12.5, "bold"))
+    if pub is None or priv is None:
+        p.append(t(22, 92, "populated by the daily workflow", C["faint"], 10.5))
+        return write("repo-mix.svg", W, H, "".join(p))
+    total = pub + priv
+    cx, cy, r, sw = 104, 152, 52, 18
+    circ = 2 * math.pi * r
+    p.append('<circle cx="%s" cy="%s" r="%s" fill="none" stroke="%s" stroke-width="%s"/>'
+             % (cx, cy, r, C["track"], sw))
+    start = 0.0
+    for value, col in ((pub, SERIES[0]), (priv, SERIES[3])):
+        frac = value / float(total)
+        seg = max(0.0, circ * frac - 3)          # 3px surface gap between segments
+        p.append('<circle cx="%s" cy="%s" r="%s" fill="none" stroke="%s" stroke-width="%s" '
+                 'stroke-dasharray="%.2f %.2f" stroke-dashoffset="%.2f" '
+                 'transform="rotate(-90 %s %s)"/>'
+                 % (cx, cy, r, col, sw, seg, circ - seg, -circ * start, cx, cy))
+        start += frac
+    p.append(t(cx, cy + 2, str(total), C["bright"], 22, "bold", "middle"))
+    p.append(t(cx, cy + 19, "repos", C["dim"], 10, anchor="middle"))
+    ly = 116
+    for label, value, col in (("Public", pub, SERIES[0]), ("Private", priv, SERIES[3])):
+        p.append('<circle cx="204" cy="%s" r="5" fill="%s"/>' % (ly - 4, col))
+        p.append(t(218, ly, label, C["fg"], 12))
+        p.append(t(W - 24, ly, "%d  %d%%" % (value, round(100.0 * value / total)),
+                   C["dim"], 12, anchor="end"))
+        ly += 24
+    tr = LIVE.get("traffic") or {}
+    p.append(t(204, ly + 14, "\u2014 traffic", C["teal"], 12, "bold"))
+    p.append(t(204 + 9 * 7.2 + 7, ly + 14, "(14 days)", C["faint"], 9.5))
+    if tr:
+        rows = [("Views", "%d" % tr["views"], "%d unique" % tr["uniques"]),
+                ("Clones", "%d" % tr["clones"], "%d unique" % tr["clone_uniques"])]
+        yy = ly + 36
+        for k, v, note in rows:
+            p.append(t(204, yy, k, C["dim"], 11))
+            p.append(t(276, yy, v, C["bright"], 11, "bold"))
+            p.append(t(304, yy, note, C["faint"], 10))
+            yy += 19
+        p.append(t(204, yy + 4, "across %d repos" % tr["repos"], C["faint"], 9.5))
+    else:
+        p.append(t(204, ly + 36, "needs a token with", C["faint"], 10))
+        p.append(t(204, ly + 50, "push scope", C["faint"], 10))
+    return write("repo-mix.svg", W, H, "".join(p))
+
+
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
-    for fn in (card_neofetch, card_building, card_repos, card_stats, card_langs):
+    for fn in (card_neofetch, card_building, card_repos, card_stats, card_langs,
+               card_activity, card_repos_mix):
         fn()
     face = font_face()
     print("%d glyphs subset, font payload %.1f KB/card" % (len(GLYPHS), len(face) / 1024.0))

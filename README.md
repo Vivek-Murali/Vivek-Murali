@@ -32,6 +32,13 @@
 <img src="assets/languages.svg" width="49%" alt="Time coded: Python 71.7%, HTML 7.5%, TypeScript 5.6%, JSON 3.4%, JavaScript 2.0%, Bash 1.3%, YAML 1.3%, Markdown 1.2%. Repos by language: Python 11, Jupyter 6, Shell 3, Rust 2, JavaScript 2, Makefile 1">
 </p>
 
+### ▶ Commit rhythm & repo mix
+
+<p align="center">
+<img src="assets/activity.svg" width="49%" alt="Commits by hour of day, all time, with automated commits excluded">
+<img src="assets/repo-mix.svg" width="49%" alt="70 repositories: 45 public (64%) and 25 private (36%), with 14-day view and clone traffic">
+</p>
+
 <details>
 <summary>▶ Full WakaTime breakdown</summary>
 

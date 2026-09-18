@@ -1,0 +1,64 @@
+name: Profile Cards
+
+on:
+  # 03:00 UTC, deliberately clear of the waka-readme job at midnight so the
+  # two never race for a push to main
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-readme-write
+  cancel-in-progress: false
+
+jobs:
+  render:
+    name: Refresh stats and re-render cards
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install --quiet pillow fonttools brotli
+
+      - name: Fetch live data from the GitHub API
+        env:
+          # GH_TOKEN (a PAT) also sees private contributions; the default
+          # token covers everything public on its own.
+          GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
+          PROFILE_LOGIN: ${{ github.repository_owner }}
+        run: python3 assets/fetch_data.py
+
+      - name: Re-render the SVG cards
+        run: python3 assets/cards.py
+
+      - name: Commit if anything changed
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- assets; then
+            echo "No change in the rendered cards; nothing to commit."
+            exit 0
+          fi
+          git add assets
+          git commit -m "Refresh profile cards from the GitHub API"
+          # the waka job writes to the same branch, so rebase before pushing
+          for attempt in 1 2 3; do
+            if git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && \
+               git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "Pushed on attempt ${attempt}."
+              exit 0
+            fi
+            echo "Push attempt ${attempt} failed; retrying."
+            sleep $((attempt * 5))
+          done
+          echo "Could not push after 3 attempts." >&2
+          exit 1

@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "assets")
-FONT = "/mnt/skills/examples/canvas-design/canvas-fonts/JetBrainsMono-Regular.ttf"
+FONT = os.path.join(ROOT, "assets", "fonts", "JetBrainsMono-Regular.ttf")
 
 # ------------------------------------------------------------------ palette --
 # Single source of truth - editing these hex values re-skins the whole animation.

@@ -1,0 +1,134 @@
+{
+  "commits": 8,
+  "contributions": {},
+  "generated_at": "2026-09-18",
+  "projects": [
+    {
+      "commits": 4,
+      "lang": "Python",
+      "name": "healthcare-cohort-agent",
+      "pushed": "2026-02-08"
+    },
+    {
+      "commits": 4,
+      "lang": "Python",
+      "name": "SQL-Dojo-DBT-Edition",
+      "pushed": "2025-12-28"
+    }
+  ],
+  "repo_index": {
+    "Buyer-s-playground": {
+      "forks": 2,
+      "lang": "Python",
+      "pushed": "2025-04-11",
+      "stars": 12
+    },
+    "CarCrashAnalysis": {
+      "forks": 0,
+      "lang": "Jupyter Notebook",
+      "pushed": "2023-02-01",
+      "stars": 2
+    },
+    "Scrappers": {
+      "forks": 0,
+      "lang": "Python",
+      "pushed": "2023-04-11",
+      "stars": 6
+    },
+    "Spark-Refresher-Projects": {
+      "forks": 0,
+      "lang": "Jupyter Notebook",
+      "pushed": "2023-08-29",
+      "stars": 2
+    },
+    "StreamingPipeline": {
+      "forks": 0,
+      "lang": "Shell",
+      "pushed": "2023-02-01",
+      "stars": 1
+    },
+    "healthcare-cohort-agent": {
+      "forks": 1,
+      "lang": "Python",
+      "pushed": "2026-02-08",
+      "stars": 0
+    }
+  },
+  "repo_langs": [
+    [
+      "Python",
+      12
+    ],
+    [
+      "Jupyter Notebook",
+      6
+    ],
+    [
+      "Shell",
+      3
+    ],
+    [
+      "Rust",
+      2
+    ],
+    [
+      "JavaScript",
+      2
+    ],
+    [
+      "HTML",
+      1
+    ]
+  ],
+  "totals": {
+    "forks": 7,
+    "original": 45,
+    "public_repos": 45,
+    "stars": 67
+  },
+  "user": {
+    "login": "Vivek-Murali",
+    "since": 2017,
+    "years": 9
+  },
+  "waka": {
+    "from": "14 January 2023",
+    "langs": [
+      [
+        "Python",
+        71.74
+      ],
+      [
+        "HTML",
+        7.55
+      ],
+      [
+        "TypeScript",
+        5.62
+      ],
+      [
+        "JSON",
+        3.38
+      ],
+      [
+        "JavaScript",
+        2.05
+      ],
+      [
+        "Text",
+        1.52
+      ],
+      [
+        "Bash",
+        1.31
+      ],
+      [
+        "YAML",
+        1.29
+      ]
+    ],
+    "to": "15 September 2026",
+    "total": "901 hrs 6 mins"
+  },
+  "window_days": 365
+}

@@ -83,6 +83,7 @@ def fetch_repos():
             "original": len(own),
             "stars": sum(r["stargazers_count"] for r in own),
             "forks": sum(r["forks_count"] for r in own),
+            "private": len(repos) - len(pub),
         },
         "repo_langs": langs.most_common(6),
         # live numbers for whichever repos the cards choose to feature
@@ -147,6 +148,73 @@ def fetch_commits(repos, since):
     return {"commits": total, "projects": per[:6]}
 
 
+
+def fetch_hours(repos):
+    """Commits by hour of day, all time, in the author's own local time.
+
+    Uses the timezone offset git recorded at commit time, so the peak reflects
+    when the work happened rather than a UTC shadow of it. Bots are excluded -
+    a nightly job would otherwise pile a year of commits onto one hour.
+    """
+    hours = [0] * 24
+    total = 0
+    for r in repos:
+        if r["private"] or r["fork"]:
+            continue
+        try:
+            commits = paged("/repos/%s/commits?author=%s" % (r["full_name"], LOGIN), cap=3)
+        except urllib.error.HTTPError as e:
+            if e.code in (404, 409):
+                continue
+            raise
+        for c in commits:
+            commit = c.get("commit") or {}
+            if (((commit.get("committer") or {}).get("name") or "").lower() in BOTS
+                    or ((c.get("committer") or {}).get("login") or "").lower() in BOTS):
+                continue
+            stamp = (commit.get("author") or {}).get("date") or ""
+            m = re.match(r"^(\d{4}-\d{2}-\d{2})T(\d{2}):", stamp)
+            if not m:
+                continue
+            hours[int(m.group(2))] += 1
+            total += 1
+    return {"by_hour": hours, "total": total,
+            "peak": hours.index(max(hours)) if total else None}
+
+
+def fetch_traffic(repos):
+    """Rolling 14-day views and clones, summed over public repos.
+
+    Needs push access, so a fine-grained or classic PAT in GH_TOKEN; the
+    default Actions token only reaches this repository. Repos that refuse are
+    skipped and counted, so the card can say what it is actually based on.
+    """
+    views = uniques = clones = clone_uniques = 0
+    counted = denied = 0
+    for r in repos:
+        if r["private"] or r["fork"]:
+            continue
+        try:
+            v = call("%s/repos/%s/traffic/views" % (API, r["full_name"]))
+            c = call("%s/repos/%s/traffic/clones" % (API, r["full_name"]))
+        except urllib.error.HTTPError as e:
+            if e.code in (403, 404):
+                denied += 1
+                continue
+            raise
+        views += v.get("count", 0)
+        uniques += v.get("uniques", 0)
+        clones += c.get("count", 0)
+        clone_uniques += c.get("uniques", 0)
+        counted += 1
+    if not counted:
+        print("traffic unavailable for all %d repos (token lacks push scope?)" % denied,
+              file=sys.stderr)
+        return {}
+    return {"views": views, "uniques": uniques, "clones": clones,
+            "clone_uniques": clone_uniques, "repos": counted, "denied": denied, "days": 14}
+
+
 def parse_waka():
     """Reuse the block waka-readme already maintains - no WakaTime key needed."""
     readme = os.path.join(ROOT, "README.md")
@@ -178,6 +246,8 @@ def main():
         "repo_langs": repo_data["repo_langs"],
         "contributions": fetch_contributions(),
         "waka": parse_waka(),
+        "hours": fetch_hours(repo_data["repos"]),
+        "traffic": fetch_traffic(repo_data["repos"]),
     }
     out.update(fetch_commits(repo_data["repos"], since))
     path = os.path.join(ROOT, "assets", "data.json")

@@ -9,13 +9,14 @@ for the dark card surface (lightness band, chroma, CVD separation, contrast).
 """
 import base64
 import io
+import json
 import os
 from xml.sax.saxutils import escape as esc
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "assets")
 MONO = "'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-FONT_DIR = "/mnt/skills/examples/canvas-design/canvas-fonts"
+FONT_DIR = os.path.join(OUT, "fonts")          # vendored, so CI needs no system font
 FONT_SRC = {"400": FONT_DIR + "/JetBrainsMono-Regular.ttf",
             "700": FONT_DIR + "/JetBrainsMono-Bold.ttf"}
 GLYPHS = set()          # every character the cards actually draw
@@ -91,11 +92,6 @@ DATA = {
                   "PySpark DataFrames and ETL."],
          "lang": "Jupyter Notebook", "dot": "#d95926", "stars": 2, "forks": 0, "when": "updated Jan 2023"},
     ],
-    "stats": [("Public repos", "73", "45 original"), ("Stars earned", "67", "own repos"),
-              ("Forks", "7", ""), ("Followers", "18", ""),
-              ("Contributions", "426", "past year"), ("Streak", "39d", "longest 131d"),
-              ("Coding time", "901 hrs", "WakaTime"), ("On GitHub", "9 yrs", "since 2017")],
-    "ring": {"pct": 95, "label": "active days", "sub": "348 of 368"},
     "langs": [("Python", 71.7), ("HTML", 7.5), ("TypeScript", 5.6), ("JSON", 3.4),
               ("JavaScript", 2.0), ("Bash", 1.3), ("YAML", 1.3), ("Markdown", 1.2)],
     "repo_langs": [("Python", 11), ("Jupyter", 6), ("Shell", 3),
@@ -104,6 +100,53 @@ DATA = {
 # One entity keeps one hue across both charts (Python and JavaScript appear in both).
 LANG_HUE = {n: SERIES[i] for i, (n, _) in enumerate(DATA["langs"])}
 REPO_HUE = {n: LANG_HUE.get(n, SERIES[i]) for i, (n, _) in enumerate(DATA["repo_langs"])}
+
+
+# --------------------------------------------------------------- live data --
+def load_live():
+    """assets/data.json, refreshed daily by the profile-cards workflow.
+
+    Absent (or stale) it simply falls back to DATA, so the cards always render.
+    """
+    path = os.path.join(OUT, "data.json")
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path) as f:
+            return json.load(f)
+    except (ValueError, OSError):
+        return {}
+
+
+LIVE = load_live()
+
+
+def stat_rows():
+    """Build the stats table from live data where it exists."""
+    tot = LIVE.get("totals") or {}
+    con = LIVE.get("contributions") or {}
+    usr = LIVE.get("user") or {}
+    wak = LIVE.get("waka") or {}
+    if not tot:
+        return []          # nothing invented: the workflow supplies these
+    rows = [("Public repos", str(tot["public_repos"]),
+             "%d original" % tot["original"] if tot.get("original") else ""),
+            ("Stars earned", str(tot["stars"]), "own repos"),
+            ("Forks", str(tot["forks"]), "")]
+    if usr.get("followers") is not None:
+        rows.append(("Followers", str(usr["followers"]), ""))
+    if con.get("calendar_total") is not None:
+        rows.append(("Contributions", str(con["calendar_total"]), "past year"))
+    if LIVE.get("commits") is not None:
+        rows.append(("Your commits", str(LIVE["commits"]), "bots excluded"))
+    if con.get("streak") is not None:
+        rows.append(("Streak", "%dd" % con["streak"], "longest %dd" % con.get("longest", 0)))
+    if wak.get("total"):
+        rows.append(("Coding time", wak["total"].replace(" mins", "m").replace(" hrs", "h"),
+                     "WakaTime"))
+    if usr.get("years"):
+        rows.append(("On GitHub", "%d yrs" % usr["years"], "since %s" % usr.get("since", "")))
+    return rows
 
 
 # ---------------------------------------------------------------- helpers --
@@ -269,7 +312,13 @@ def card_repos():
     rows = (len(DATA["repos"]) + 1) // 2
     H = rows * ch + (rows - 1) * gap
     p = []
+    idx = LIVE.get("repo_index") or {}
     for i, r in enumerate(DATA["repos"]):
+        live = idx.get(r["name"])
+        if live:                      # keep the hand-written blurb, refresh the numbers
+            r = dict(r, stars=live["stars"], forks=live["forks"],
+                     lang=live["lang"] or r["lang"],
+                     when="updated " + live["pushed"])
         x = (i % 2) * (cw + 20) + 0.5
         y = (i // 2) * (ch + gap) + 0.5
         p.append(window(x, y, cw - 1, ch - 1, "vivek@github: ~$ cd " + r["name"], 8, 28))
@@ -296,72 +345,106 @@ def card_repos():
 
 # ------------------------------------------------------------- 4. gh stats --
 def card_stats():
-    W, H = 440, 268
+    W, H = 440, 372
     p = [window(0.5, 0.5, W - 1, H - 1, "vivek@github: ~$ gh stats")]
     p.append(t(22, 58, "vivek", C["bright"], 13.5, "bold"))
     p.append(t(22 + 5 * 8.4, 58, "@github", C["teal"], 13.5, "bold"))
-    y = 84
-    for k, v, note in DATA["stats"]:
+    y = 88
+    for k, v, note in stat_rows():
         p.append(t(22, y, k, C["dim"], 12))
-        p.append(t(152, y, v, C["bright"], 12, "bold"))
+        p.append(t(168, y, v, C["bright"], 12, "bold"))
         if note:
-            p.append(t(152 + len(v) * 7.6 + 10, y, note, C["faint"], 10.5))
-        y += 21
-    # single-value progress ring, labelled directly
+            p.append(t(168 + len(v) * 7.6 + 10, y, note, C["faint"], 10.5))
+        y += 22
     import math
-    cx, cy, r = W - 82, 150, 34
-    pct = DATA["ring"]["pct"] / 100.0
+    con = LIVE.get("contributions") or {}
+    if con.get("tracked_days"):
+        pct = int(round(100.0 * con["active_days"] / con["tracked_days"]))
+        sub = "%d of %d" % (con["active_days"], con["tracked_days"])
+    else:
+        pct = sub = None
+    if pct is None:                 # no calendar yet - draw no ring at all
+        p.append(t(22, y + 24, "contribution calendar: awaiting first workflow run",
+                   C["faint"], 10))
+        if LIVE.get("generated_at"):
+            p.append(t(22, H - 16, "updated %s \u00b7 GitHub API" % LIVE["generated_at"],
+                       C["faint"], 9.5))
+        return write("stats.svg", W, H, "".join(p))
+    cx, cy, r = W - 74, y + 44, 34
     circ = 2 * math.pi * r
-    p.append('<circle cx="%s" cy="%s" r="%s" fill="none" stroke="%s" stroke-width="7"/>' % (cx, cy, r, C["track"]))
+    p.append('<circle cx="%s" cy="%s" r="%s" fill="none" stroke="%s" stroke-width="7"/>'
+             % (cx, cy, r, C["track"]))
     p.append('<circle cx="%s" cy="%s" r="%s" fill="none" stroke="%s" stroke-width="7" '
              'stroke-linecap="round" stroke-dasharray="%.2f %.2f" transform="rotate(-90 %s %s)"/>'
-             % (cx, cy, r, C["teal"], circ * pct, circ, cx, cy))
-    p.append(t(cx, cy + 7, "%d%%" % DATA["ring"]["pct"], C["bright"], 19, "bold", "middle"))
-    p.append(t(cx, cy + r + 20, DATA["ring"]["label"], C["dim"], 10.5, anchor="middle"))
-    p.append(t(cx, cy + r + 36, DATA["ring"]["sub"], C["faint"], 10, anchor="middle"))
+             % (cx, cy, r, C["teal"], circ * pct / 100.0, circ, cx, cy))
+    p.append(t(cx, cy + 7, "%d%%" % pct, C["bright"], 19, "bold", "middle"))
+    p.append(t(cx, cy + r + 20, "active days", C["dim"], 10.5, anchor="middle"))
+    p.append(t(cx, cy + r + 36, sub, C["faint"], 10, anchor="middle"))
+    if LIVE.get("generated_at"):
+        p.append(t(22, H - 16, "updated %s \u00b7 GitHub API" % LIVE["generated_at"], C["faint"], 9.5))
     return write("stats.svg", W, H, "".join(p))
 
 
 # ------------------------------------------------------------ 5. languages --
 def card_langs():
-    W, H = 440, 268
+    W, H = 440, 372
+    waka = LIVE.get("waka") or {}
+    langs = [(n, v) for n, v in (waka.get("langs") or DATA["langs"])][:8]
+    hue = {n: SERIES[i] for i, (n, _) in enumerate(langs)}
     p = [window(0.5, 0.5, W - 1, H - 1, "vivek@github: ~$ wakatime --languages")]
-    p.append(t(22, 58, "— time coded", C["teal"], 12.5, "bold"))
-    p.append(t(22 + 13 * 7.5, 58, "(WakaTime)", C["faint"], 10.5))
-    # stacked bar: 2px surface gaps between segments, rounded outer ends
+    p.append(t(22, 58, "\u2014 time coded", C["teal"], 12.5, "bold"))
+    since = (" \u00b7 since " + waka["from"][-4:]) if waka.get("from") else ""
+    p.append(t(22 + 13 * 7.5, 58, "(WakaTime%s)" % since, C["faint"], 10))
     x, y, bw, bh = 22, 70, W - 44, 10
-    total = sum(v for _, v in DATA["langs"])
+    total = sum(v for _, v in langs) or 1
     p.append(rect(x, y, bw, bh, C["track"], bh / 2))
-    cx = x
-    segs = []
-    for name, v in DATA["langs"]:
+    cx, segs = x, []
+    for name, v in langs:
         w = bw * v / total
-        segs.append((cx, max(2.0, w - 2), LANG_HUE[name]))
+        segs.append((cx, max(2.0, w - 2), hue[name]))
         cx += w
     for i, (sx, sw, col) in enumerate(segs):
-        r = bh / 2 if i in (0, len(segs) - 1) else 0
-        p.append(rect(sx, y, sw, bh, col, r))
+        p.append(rect(sx, y, sw, bh, col, bh / 2 if i in (0, len(segs) - 1) else 0))
     y = 104
-    half = (len(DATA["langs"]) + 1) // 2
-    for i, (name, v) in enumerate(DATA["langs"]):
+    half = (len(langs) + 1) // 2
+    for i, (name, v) in enumerate(langs):
         col_x = 22 if i < half else 240
         row_y = y + (i % half) * 20
-        p.append('<circle cx="%s" cy="%s" r="4" fill="%s"/>' % (col_x + 4, row_y - 4, LANG_HUE[name]))
-        p.append(t(col_x + 15, row_y, name, C["fg"], 11.5))
+        p.append('<circle cx="%s" cy="%s" r="4" fill="%s"/>' % (col_x + 4, row_y - 4, hue[name]))
+        p.append(t(col_x + 15, row_y, name[:12], C["fg"], 11.5))
         p.append(t(col_x + 168, row_y, "%.1f%%" % v, C["dim"], 11.5, anchor="end"))
+
     y = 196
-    p.append(t(22, y, "— repos by language", C["teal"], 12.5, "bold"))
+    projects = LIVE.get("projects") or []
+    p.append(t(22, y, "\u2014 projects", C["teal"], 12.5, "bold"))
+    p.append(t(22 + 10 * 7.5, y, "(commits, past year \u00b7 bots excluded)", C["faint"], 9.5))
     y += 22
+    if projects:
+        top = max(pr["commits"] for pr in projects)
+        for pr in projects[:4]:
+            p.append(t(22, y, pr["name"][:26], C["fg"], 11))
+            p.append(bar(232, y - 8, 150, 6, pr["commits"] / float(top), C["teal"]))
+            p.append(t(W - 22, y, str(pr["commits"]), C["dim"], 11, anchor="end"))
+            y += 20
+    else:
+        p.append(t(22, y, "populated by the daily workflow", C["faint"], 10.5))
+
+    y = 300
+    p.append(t(22, y, "\u2014 repos by language", C["teal"], 12.5, "bold"))
+    y += 22
+    rl = [(n, c) for n, c in (LIVE.get("repo_langs") or DATA["repo_langs"])][:6]
+    rhue = {n: hue.get(n, SERIES[i]) for i, (n, _) in enumerate(rl)}
     cx, cy2 = 22, y
-    for name, n in DATA["repo_langs"]:
-        label = "%s %d" % (name, n)
+    for name, n in rl:
+        short = name.replace("Jupyter Notebook", "Jupyter")
+        label = "%s %d" % (short, n)
         w = len(label) * 11 * 0.62 + 26
         if cx + w > W - 22:
             cx, cy2 = 22, cy2 + 26
         p.append(rect(cx, cy2 - 13, w, 20, C["head"], 10))
-        p.append('<circle cx="%s" cy="%s" r="3.5" fill="%s"/>' % (cx + 11, cy2 - 3, REPO_HUE[name]))
-        p.append(t(cx + 20, cy2 + 1, name, C["fg"], 11))
-        p.append(t(cx + 20 + len(name) * 6.6 + 5, cy2 + 1, str(n), C["faint"], 11))
+        p.append('<circle cx="%s" cy="%s" r="3.5" fill="%s"/>' % (cx + 11, cy2 - 3, rhue[name]))
+        p.append(t(cx + 20, cy2 + 1, short, C["fg"], 11))
+        p.append(t(cx + 20 + len(short) * 6.6 + 5, cy2 + 1, str(n), C["faint"], 11))
         cx += w + 7
     return write("languages.svg", W, H, "".join(p))
 
